@@ -1,0 +1,216 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Sensor:DHT11 U2
+U 1 1 5CEDC759
+P 3900 3150
+F 0 "U2" H 3656 3196 50  0000 R CNN
+F 1 "DHT11" H 3656 3105 50  0000 R CNN
+F 2 "Sensor:Aosong_DHT11_5.5x12.0_P2.54mm" H 3900 2750 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/aosong/DHT11.pdf" H 4050 3400 50  0001 C CNN
+	1    3900 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Proximity:KRC011 U1
+U 1 1 5CEE10BC
+P 2200 3050
+F 0 "U1" V 2154 3230 50  0000 L CNN
+F 1 "HCSR-04" V 2245 3230 50  0000 L CNN
+F 2 "OptoDevice:Kingbright_KRC011_Vertical" H 2200 2850 50  0001 C CNN
+F 3 "http://www.kingbright.com/attachments/file/psearch/000/00/00/KRC011(Ver.15).pdf" H 2200 3150 50  0001 C CNN
+	1    2200 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x20_Odd_Even J2
+U 1 1 5CEE2A3E
+P 8050 2700
+F 0 "J2" H 8100 3817 50  0000 C CNN
+F 1 "Conn_02x20_Odd_Even" H 8100 3726 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_2x20_P1.00mm_Vertical" H 8050 2700 50  0001 C CNN
+F 3 "~" H 8050 2700 50  0001 C CNN
+	1    8050 2700
+	1    0    0    -1  
+$EndComp
+Text Notes 9050 2850 0    63   ~ 0
+5V\n5V\nGND\nGPIO14\nGPIO15\nGPIO18\nGND\nGPIO23\nGPIO24\nGND\nGPIO25\n
+Text Notes 6450 2650 0    63   ~ 0
+3V3\nGPIO2\nGPIO3\nGPIO4\nGND\nGPIO17\nGPIO27\nGPIO22\n3V3\n
+Wire Wire Line
+	8350 1800 8800 1800
+Wire Wire Line
+	8800 1800 8800 1350
+Wire Wire Line
+	2300 1350 2300 2750
+Wire Wire Line
+	7850 3700 7600 3700
+Wire Wire Line
+	7600 3700 7600 4700
+Wire Wire Line
+	7600 4700 5100 4700
+Wire Wire Line
+	1250 4700 1250 1350
+Wire Wire Line
+	1250 1350 2100 1350
+Wire Wire Line
+	2100 1350 2100 2750
+Wire Wire Line
+	8350 2500 8600 2500
+Wire Wire Line
+	8600 2500 8600 4100
+Wire Wire Line
+	8600 4100 2100 4100
+Wire Wire Line
+	2100 4100 2100 3350
+Wire Wire Line
+	8350 2800 8900 2800
+Wire Wire Line
+	8900 2800 8900 4250
+Wire Wire Line
+	8900 4250 2800 4250
+$Comp
+L Device:R R1
+U 1 1 5CF08C88
+P 2550 3500
+F 0 "R1" V 2343 3500 50  0000 C CNN
+F 1 "1K" V 2434 3500 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2480 3500 50  0001 C CNN
+F 3 "~" H 2550 3500 50  0001 C CNN
+	1    2550 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5CF0C0EC
+P 2800 4500
+F 0 "R2" H 2870 4546 50  0000 L CNN
+F 1 "2K" H 2870 4455 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2730 4500 50  0001 C CNN
+F 3 "~" H 2800 4500 50  0001 C CNN
+	1    2800 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 4250 2800 4350
+Connection ~ 2800 4250
+Wire Wire Line
+	2800 4650 2800 4700
+Connection ~ 2800 4700
+Wire Wire Line
+	2800 4700 1250 4700
+Connection ~ 3900 4700
+Wire Wire Line
+	3900 4700 2950 4700
+Wire Wire Line
+	2300 1350 8800 1350
+Wire Wire Line
+	7850 1800 7850 1450
+Wire Wire Line
+	7850 1450 3900 1450
+$Comp
+L Device:LED D1
+U 1 1 5CF11777
+P 2950 2800
+F 0 "D1" V 2989 2683 50  0000 R CNN
+F 1 "LED" V 2898 2683 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2950 2800 50  0001 C CNN
+F 3 "~" H 2950 2800 50  0001 C CNN
+	1    2950 2800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3900 3450 3900 4700
+Wire Wire Line
+	3900 1450 3900 2850
+Wire Wire Line
+	7850 2400 7500 2400
+Wire Wire Line
+	7500 2400 7500 3150
+Wire Wire Line
+	7500 3150 4200 3150
+Wire Wire Line
+	2950 2950 2950 4700
+Connection ~ 2950 4700
+Wire Wire Line
+	2950 4700 2800 4700
+$Comp
+L Device:LED D2
+U 1 1 5CF1B020
+P 5100 2850
+F 0 "D2" V 5139 2733 50  0000 R CNN
+F 1 "LED" V 5048 2733 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5100 2850 50  0001 C CNN
+F 3 "~" H 5100 2850 50  0001 C CNN
+	1    5100 2850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7850 2100 2950 2100
+Wire Wire Line
+	2950 2100 2950 2650
+Wire Wire Line
+	7850 2300 5100 2300
+Wire Wire Line
+	5100 2300 5100 2700
+Wire Wire Line
+	5100 3000 5100 4700
+Connection ~ 5100 4700
+Wire Wire Line
+	5100 4700 3900 4700
+Wire Wire Line
+	2700 3500 2800 3500
+Wire Wire Line
+	2800 3500 2800 4250
+Wire Wire Line
+	2300 3350 2300 3500
+Wire Wire Line
+	2300 3500 2400 3500
+Text Notes 1500 3200 0    50   ~ 0
+1 = VCC\n2 = GND\n3 = ECHO\n4 = TRIG
+NoConn ~ 8350 1900
+NoConn ~ 8350 2000
+NoConn ~ 8350 2100
+NoConn ~ 8350 2200
+NoConn ~ 8350 2300
+NoConn ~ 8350 2400
+NoConn ~ 8350 2600
+NoConn ~ 8350 2700
+NoConn ~ 8350 2900
+NoConn ~ 8350 3000
+NoConn ~ 8350 3100
+NoConn ~ 8350 3200
+NoConn ~ 8350 3300
+NoConn ~ 8350 3400
+NoConn ~ 8350 3500
+NoConn ~ 8350 3600
+NoConn ~ 8350 3700
+NoConn ~ 7850 3600
+NoConn ~ 7850 3500
+NoConn ~ 7850 3400
+NoConn ~ 7850 3300
+NoConn ~ 7850 3200
+NoConn ~ 7850 3100
+NoConn ~ 7850 3000
+NoConn ~ 7850 2900
+NoConn ~ 7850 2800
+NoConn ~ 7850 2700
+NoConn ~ 7850 2600
+NoConn ~ 7850 2500
+NoConn ~ 7850 2200
+NoConn ~ 7850 2000
+NoConn ~ 7850 1900
+$EndSCHEMATC
